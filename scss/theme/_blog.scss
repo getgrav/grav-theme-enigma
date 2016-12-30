@@ -52,7 +52,8 @@
 
         .tags {
             a {
-                background: $core-color;
+                background: rgba(#fff, 0.8);
+                color: $body-title-color;
             }
         }
 
@@ -162,7 +163,7 @@
             .label {
                 display: inline-block;
                 margin-right: 1rem;
-                border-radius: 50%;
+                border-radius: 0.2rem;
                 min-width: 2.2rem;
                 min-height: 2.2rem;
                 font-size: 80%;

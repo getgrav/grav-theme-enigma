@@ -3,11 +3,11 @@ $body-background: #f7f7f7;
 $body-font-color: #666;
 $body-title-color: darken($body-font-color, 15%);
 
-$core-color: #0073B5;
+$core-color: #8e44ad;
 $core-secondary-color: lighten($core-color, 60%);
 $core-light-color: #fff;
 $core-meta-color: #888;
-$core-link-color: #0073B5;
+$core-link-color: $core-color;
 $core-border-color: darken($body-background, 3%);
 $core-empty-bg: #f0f0f0;
 
@@ -21,7 +21,7 @@ $highlight-color: lighten($control-color-warning, 32%);
 
 // Variables
 $light-grey: #999;
-$primary-accent: #0073B5;
+$primary-accent: #8e44ad;
 $page-background: #ffffff;
 $dark-background: #23222d;
 

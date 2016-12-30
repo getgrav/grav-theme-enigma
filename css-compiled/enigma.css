@@ -147,14 +147,14 @@
       position: relative;
       margin: 0; }
       #navbar ul li.active a {
-        color: #0073B5; }
+        color: #8e44ad; }
       #navbar ul li a {
         display: inline-block;
         padding: 0.2rem 2rem;
         font-size: 1.3rem;
         color: #666; }
         #navbar ul li a:hover {
-          color: #0073B5; }
+          color: #8e44ad; }
           #navbar ul li a:hover:before {
             visibility: visible;
             -webkit-transform: scaleX(0.75);
@@ -169,7 +169,7 @@
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: #0073B5;
+          background-color: #8e44ad;
           visibility: hidden;
           -webkit-transform: scaleX(0);
           -moz-transform: scaleX(0);
@@ -233,7 +233,8 @@ div#breadcrumbs {
       font-size: 120%;
       display: block; }
     #hero-header .hero-header-wrapper .tags a {
-      background: #0073B5; }
+      background: rgba(255, 255, 255, 0.8);
+      color: #404040; }
     #hero-header .hero-header-wrapper .label {
       font-size: 90%;
       padding: 0.2rem .5rem;
@@ -294,14 +295,14 @@ div#breadcrumbs {
       #blog-body #sidebar .archives .label {
         display: inline-block;
         margin-right: 1rem;
-        border-radius: 50%;
+        border-radius: 0.2rem;
         min-width: 2.2rem;
         min-height: 2.2rem;
         font-size: 80%;
         text-align: center;
         font-weight: 600;
         color: #fff;
-        background-color: #0073B5; }
+        background-color: #8e44ad; }
     #blog-body #sidebar .related-pages {
       list-style: none;
       margin-left: 0; }
