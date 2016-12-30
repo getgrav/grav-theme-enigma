@@ -27,7 +27,7 @@ class Enigma extends Theme
 
         $options = [
             'theme_class',
-            'hero_header' => ['size', 'color', 'image'],
+            'hero_header' => ['size', 'color', 'image', 'date', 'taxonomy'],
         ];
 
         foreach ($options as $key => $option) {

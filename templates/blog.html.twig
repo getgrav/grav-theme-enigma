@@ -6,7 +6,7 @@
 {% block body %}
 <section id="body">
 
-    <div id="hero-header" class="hero-header-{{ theme.hero_header.size }}">
+    <div id="hero-header" class="hero-header-{{ theme.hero_header.size }}" {% if theme.hero_header.color %}style="background-color:{{ theme.hero_header.color  }};"{% endif %}>
         <img id="hero-header-image" src="{{ blog_image.url }}" />
         <div class="container wrapper grid-size">
             {{ page.content }}
