@@ -1,0 +1,186 @@
+// Large default blog header
+#hero-header {
+    position: relative;
+    padding: 20rem 0;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    h1 {
+        font-weight: 600;
+    }
+
+    &.hero-padding {
+        padding-top: 5rem;
+    }
+
+    &.hero-header-image {
+        min-height: 500px;
+        .blog-header-wrapper {
+            text-align: left;
+        }
+    }
+
+    .hero-header-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+
+        .container {
+            margin-top: 25rem;
+        }
+
+        h1 a {
+            color: #fff;
+            &:hover {
+                color: #eee;
+            }
+        }
+
+        time {
+            color: #fff;
+            font-size: 120%;
+            display: block;
+        }
+
+        .tags {
+            a {
+                background: $core-color;
+            }
+        }
+
+        .label {
+            font-size: 90%;
+            padding: 0.2rem .5rem;
+            display: inline-block;
+        }
+
+
+    }
+}
+
+
+#blog-body {
+    background: linear-gradient(to right, $body-background 0%, $body-background 50%, $content-background 50%, $content-background 100%);
+
+    #item, #listing {
+        padding: 0 $content-gutter $content-gutter;
+        background: $body-background;
+
+        .blog-item {
+            background: $content-background;
+            padding: $content-gutter $content-gutter $content-gutter;
+            margin-bottom: $content-gutter;
+            border: 1px solid $core-border-color;
+
+            h2 {
+                margin-bottom: 3rem;
+            }
+        }
+
+    }
+
+    #item {
+        p {
+        }
+    }
+
+    #listing {
+
+        .blog-item-footer {
+            margin: $content-gutter*1.5 (-$content-gutter) (-$content-gutter);
+            padding: $content-gutter/2 $content-gutter;
+            background: darken($content-background, 2%);
+            border-top: 1px solid $core-border-color;
+
+            time {
+                color: $body-title-color;
+            }
+
+            .tags {
+                margin-left: 1rem;
+            }
+
+            .label {
+                font-size: 90%;
+                padding: 0.2rem .5rem;
+                display: inline-block;
+            }
+        }
+
+    }
+
+    #listing-footer {
+        text-align: center;
+
+        .pagination {
+            margin: 0 auto;
+
+            li {
+                border-color: $core-border-color;
+                background: $content-background;
+            }
+        }
+    }
+
+    #sidebar {
+        padding: $content-gutter*2 $content-gutter $content-gutter ;
+        background: $content-background;
+        border-left: 1px solid $core-border-color;
+
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.3rem;
+            margin-top: 0;
+        }
+
+        .sidebar-content {
+            margin-bottom: $content-gutter * 2;
+        }
+
+        .tags {
+            .label {
+                font-size: 90%;
+                padding: 0.2rem .5rem;
+                display: inline-block;
+                margin-right: -1px;
+                margin-bottom: 2px;
+            }
+        }
+
+        .archives {
+            list-style: none;
+            margin-left: 0;
+            .label {
+                display: inline-block;
+                margin-right: 1rem;
+                border-radius: 50%;
+                min-width: 2.2rem;
+                min-height: 2.2rem;
+                font-size: 80%;
+                text-align: center;
+                font-weight: 600;
+                color: #fff;
+                background-color: $core-color;
+            }
+        }
+
+        .related-pages {
+            list-style: none;
+            margin-left: 0;
+
+            li {
+                border-bottom: 1px solid $core-border-color;
+
+                .score {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+

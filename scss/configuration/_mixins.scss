@@ -1,0 +1,26 @@
+@mixin breakpoint($point) {
+   @if $point == xl {
+     @media (min-width: 961px) { @content ; }
+  }
+   @else if $point == lg {
+     @media (max-width: 960px) { @content ; }
+  }
+    @else if $point == md {
+     @media (max-width: 840px) { @content ; }
+  }
+   @else if $point == sm {
+     @media (max-width: 600px)  { @content ; }
+  }
+  @else if $point == xs {
+     @media (max-width: 480px)  { @content ; }
+
+  }
+}
+
+@mixin grid-size($width) {
+    @media screen and (min-width: $width) {
+        .grid-size {
+            width: $width;
+        }
+    }
+}

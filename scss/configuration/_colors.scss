@@ -1,0 +1,49 @@
+// Core colors
+$body-background: #f7f7f7;
+$body-font-color: #666;
+$body-title-color: darken($body-font-color, 15%);
+
+$core-color: #0073B5;
+$core-secondary-color: lighten($core-color, 60%);
+$core-light-color: #fff;
+$core-meta-color: #888;
+$core-link-color: #0073B5;
+$core-border-color: darken($body-background, 3%);
+$core-empty-bg: #f0f0f0;
+
+$control-color: #c5c5c5;
+$control-color-success: #32b643;
+$control-color-info: #0193eb;
+$control-color-warning: #ffb700;
+$control-color-danger: rgba(230,80,89,1);
+
+$highlight-color: lighten($control-color-warning, 32%);
+
+// Variables
+$light-grey: #999;
+$primary-accent: #0073B5;
+$page-background: #ffffff;
+$dark-background: #23222d;
+
+
+$content-link: $primary-accent;
+$content-text: #666666;
+$content-title: #444444;
+$content-background: #ffffff;
+$content-border: #dddddd;
+
+$tab-border: $content-border;
+$tab-border-sides: darken($tab-border, 7%);
+$tab-active-text: $content-text;
+$tab-active-background: $content-background;
+$tab-inactive-text: $light-grey;
+$tab-inactive-background: $page-background;
+
+$box-color: #E4EEF5;
+
+$toast-danger-background: rgba(230,80,89,1);
+
+$glance-blue: $primary-accent;
+$glance-red: #e65059;
+$glance-aqua: #3dc5d2;
+$glance-purple: #8e44ad;

@@ -1,0 +1,84 @@
+// Core variables
+// Global
+$html-font-size: 10px;
+$html-line-height: 1.6;
+
+$body-font-size: 1.6rem;
+$body-font-family: 'Open Sans', sans-serif;
+
+// Sizes
+$layout-gutter: 1rem;
+$content-gutter: 3rem;
+$paddings: 0 0.5 1 1.5 2 3 4 5;
+
+// Responsive breakpoints$border-radius: 3px;
+$size-xs: 480px;
+$size-sm: 600px;
+$size-md: 840px;
+$size-lg: 960px;
+$size-xl: 1280px;
+
+// Functions
+@function strip-unit($number) {
+    @if type-of($number)=='number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+$browser-context: strip-unit($html-font-size);
+@function rem($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
+
+@function px($rem, $context: $browser-context) {
+    @if (unitless($rem)) {
+        $rem: $rem * 1rem;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $rem * $context / 1rem;
+}
+
+// Mixins
+@mixin clearfix() {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+@mixin toast-variant($color) {
+    background: $color;
+    border-color: darken($color, 2%);
+    color: $core-light-color;
+    a {
+        color: $core-light-color;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .75;
+        }
+    }
+}
+
+@mixin label-base() {
+    border-radius: .2rem;
+    display: inline;
+    font-size: 1em;
+    padding: .1em .3em;
+    vertical-align: baseline;
+}
+
+@mixin label-variant($color) {
+    background: $color;
+    color: $core-light-color;
+}

@@ -1,0 +1,233 @@
+// Switch to fixed width
+@include grid-size(1280px);
+
+// Fluid font adaptation
+$min_width: 400;
+$max_width: 1200;
+
+$min_font: 8;
+$max_font: 11;
+
+:root { font-size: #{$min_font}px; }
+
+@media (min-width: #{$min_width}px) and (max-width: #{$max_width}px) {
+  :root {
+    font-size: calc(#{$min_font}px + (#{$max_font} - #{$min_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width})));
+  }
+}
+@media (min-width: #{$max_width}px) {
+  :root {
+    font-size: #{$max_font}px;
+  }
+}
+
+// Color variations
+.header-light {
+    #logo svg path {
+        fill: #fff !important;
+
+    }
+
+    #navbar ul li {
+        &.active a {
+            color: #fff;
+        }
+
+        a {
+            color: #eee;
+            &:hover {
+                color: #fff;
+            }
+            &:before {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.header-dark {
+    #logo svg path {
+        fill: #000 !important;
+
+    }
+
+    #navbar ul li {
+        &.active a {
+            color: #000;
+        }
+
+        a {
+            color: #333;
+            &:hover {
+                color: #000;
+            }
+            &:before {
+                background-color: #000;
+            }
+        }
+    }
+}
+
+// Fixed Header
+#header {
+    @extend .default-animation;
+    width: 100%;
+    z-index: 2;
+
+    &.scrolled {
+        background: rgba($dark-background,0.9);
+
+        #logo svg {
+            max-width: 100px;
+
+            path {
+                fill: #fff !important;
+            }
+        }
+
+        #navbar ul {
+            margin: 0.3rem 0;
+
+            li {
+                &.active a {
+                    color: #fff;
+
+
+                }
+
+                a {
+                    color: #999;
+                    &:hover {
+                        color: #fff;
+                    }
+                    &:before {
+                        background-color: #fff;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+// Footer
+#footer {
+    background: $dark-background;
+    padding: $content-gutter;
+    text-align: center;
+    color: #888;
+
+    a {
+        color: #ddd;
+        &:hover {
+            color: #eee;
+        }
+    }
+
+    #to-top {
+
+        height: 50px;
+        width: 50px;
+        line-height: 45px;
+        font-size: 3rem;
+        background: lighten($dark-background, 7%);
+    }
+}
+
+// Logo
+#logo {
+    padding: 1rem 1rem 1rem $content-gutter;
+    svg {
+        @extend .default-animation;
+        max-width: 180px;
+    }
+
+}
+
+// Navigation bar
+#navbar {
+    padding: 1rem $content-gutter 1rem 1rem;
+    ul {
+        @extend .default-animation;
+        margin: 1.6rem 0;
+        padding: 0;
+        list-style: none;
+        float: right;
+
+        li {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+
+            &.active {
+                a {
+                    color: $core-link-color;
+                }
+            }
+
+            a {
+
+                display: inline-block;
+                padding: 0.2rem 2rem;
+                font-size: 1.3rem;
+                color: $body-font-color;
+
+                &:hover {
+                    color: $core-link-color;
+
+                    &:before {
+                        visibility: visible;
+                        @include transform(scaleX(0.75));
+                    }
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $core-link-color;
+                    visibility: hidden;
+                    @include transform(scaleX(0));
+                    @include transition(all 0.2s ease);
+                }
+            }
+        }
+    }
+}
+
+
+
+// Mobile hamburger toggle
+#mobile-toggle {
+    display: none;
+    font-size: 3rem;
+    @include breakpoint(md) {
+        display: inline-block;
+    }
+}
+
+// Breadcrumbs styling
+div#breadcrumbs {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 5rem;
+    height: 5rem;
+    padding-left: $content-gutter;
+
+    span:first-child {
+        &:before {
+            font-family: FontAwesome;
+            content: "\f015";
+            padding-right: 10px;
+        }
+    }
+}
+
+
+
+

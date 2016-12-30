@@ -1,0 +1,23 @@
+name: Enigma
+version: 1.0.0
+description: "Enigma is the **NEW** default theme included with **Grav**"
+icon: empire
+author:
+  name: Team Grav
+  email: devs@getgrav.org
+  url: http://getgrav.org
+homepage: https://github.com/getgrav/grav-theme-enigma
+demo: http://demo.getgrav.org/blog-skeleton
+keywords: enigma, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/getgrav/grav-theme-enigma/issues
+license: MIT
+
+form:
+  validation: loose
+
+    logo:
+      type: file
+      label: File Upload
+      destination: 'user/themes/enigma/assets'
+      accept:
+        - image/*

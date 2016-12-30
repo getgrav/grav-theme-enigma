@@ -1,0 +1,33 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set blog_image = page.media.images['page-header.jpg'] %}
+
+{% block body %}
+<section id="body">
+
+    <div id="hero-header"{% if blog_image %} class="hero-header-image" style="background-image: url({{ blog_image.url }});"{% else %} class="hero-padding"{% endif %}>
+        <div class="hero-header-wrapper">
+            <div class="container wrapper grid-size">
+                {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
+                {% include 'partials/blog/date.html.twig' %}
+                {% include 'partials/blog/taxonomy.html.twig' %}
+            </div>
+        </div>
+    </div>
+    <div id="blog-body">
+        <div class="container wrapper grid-size">
+           <div class="columns">
+                <div id="item" class="column col-8 col-md-12">
+                    {% if config.plugins.breadcrumbs.enabled %}
+                        {% include 'partials/breadcrumbs.html.twig' %}
+                    {% endif %}
+                    {% include 'partials/blog-item.html.twig' with {'blog':page.parent, 'truncate':false} %}
+                </div>
+                <div id="sidebar" class="column col-4 col-md-12">
+                    {% include 'partials/sidebar.html.twig' with {'blog':page.parent}%}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

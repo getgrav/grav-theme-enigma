@@ -1,0 +1,33 @@
+// Toasts
+.toast,
+.alert {
+    background: $core-border-color;
+    border: .1rem solid darken($core-border-color, 2%);
+    border-radius: .3rem;
+    color: #666;
+    display: block;
+    padding: 1.4rem;
+    width: 100%;
+    p {
+        margin-bottom: 0;
+    }
+    &.toast-primary,
+    &.blue {
+        @include toast-variant($core-color);
+    }
+    &.toast-success,
+    &.green {
+        @include toast-variant($control-color-success);
+    }
+    &.toast-danger,
+    &.red {
+        @include toast-variant($control-color-danger);
+    }
+    &.toast-primary,
+    &.toast-success,
+    &.toast-danger {
+        .btn-clear {
+            color: $core-light-color;
+        }
+    }
+}

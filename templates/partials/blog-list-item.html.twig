@@ -1,0 +1,14 @@
+<div class="blog-item h-entry">
+    {% include 'partials/blog/title.html.twig' %}
+
+    {% include 'partials/blog/page-summary.html.twig' %}
+
+    <div class="blog-item-footer">
+        {% if not page.header.link %}
+        <a class="float-right" href="{{ page.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a>
+        {% endif %}
+        {% include 'partials/blog/date.html.twig' %}
+        {% include 'partials/blog/taxonomy.html.twig' %}
+    </div>
+
+</div>

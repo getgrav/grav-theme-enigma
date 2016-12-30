@@ -1,0 +1,39 @@
+// Base
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: $html-font-size;
+    line-height: $html-line-height;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: $body-background;
+    color: $body-font-color;
+    font-family: $body-font-family;
+    font-weight: 300;
+    font-size: $body-font-size;
+    overflow-x: hidden;
+}
+
+a {
+    color: $core-link-color;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+        color: darken($core-link-color, 25%);
+    }
+}
+
+// Disabled state
+&[disabled],
+.disabled {
+    cursor: default;
+    opacity: .75;
+    pointer-events: none;
+}
