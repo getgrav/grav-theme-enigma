@@ -128,7 +128,7 @@ pre {
 code {
     background: $core-border-color;
     @include label-base();
-    white-space: nowrap;
+    //white-space: nowrap;
     pre & {
         background: transparent;
         border-left: 0;

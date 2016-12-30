@@ -1,2 +1,7 @@
 enabled: true
+body_classes:                       # header-light|header-dark
+hero_header:
+    image: page-header.jpg          # Use this image to be the page header
+    color: '#913D88'                # Color
+    size: fullscreen                # small|medium|fullscreen
 

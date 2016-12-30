@@ -1,19 +1,24 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set blog_image = page.media.images['page-header.jpg'] %}
+{% set blog_image = page.media.images[theme.hero_header.image] %}
 
 {% block body %}
 <section id="body">
 
-    <div id="hero-header"{% if blog_image %} class="hero-header-image" style="background-image: url({{ blog_image.url }});"{% else %} class="hero-padding"{% endif %}>
-        <div class="hero-header-wrapper">
-            <div class="container wrapper grid-size">
-                {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
-                {% include 'partials/blog/date.html.twig' %}
-                {% include 'partials/blog/taxonomy.html.twig' %}
-            </div>
+    <div id="hero-header" class="hero-header-{{ theme.hero_header.size }}">
+
+        <img id="hero-header-image" src="{{ blog_image.url }}" />
+        <div class="hero-header-wrapper"></div>
+        <div class="container wrapper grid-size">
+            {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
+            {% include 'partials/blog/date.html.twig' %}
+            {% include 'partials/blog/taxonomy.html.twig' %}
         </div>
+        {% if theme.hero_header.size == 'fullscreen' %}
+            <div class="mouse-scroller"></div>
+        {% endif %}
     </div>
+
     <div id="blog-body">
         <div class="container wrapper grid-size">
            <div class="columns">

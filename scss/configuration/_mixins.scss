@@ -1,20 +1,26 @@
 @mixin breakpoint($point) {
-   @if $point == xl {
-     @media (min-width: 961px) { @content ; }
-  }
-   @else if $point == lg {
-     @media (max-width: 960px) { @content ; }
-  }
-    @else if $point == md {
-     @media (max-width: 840px) { @content ; }
-  }
-   @else if $point == sm {
-     @media (max-width: 600px)  { @content ; }
-  }
-  @else if $point == xs {
-     @media (max-width: 480px)  { @content ; }
+    @if $point == xl {
+        @media (min-width: 961px) {
+            @content;
+        }
+    } @else if $point == lg {
+        @media (max-width: 960px) {
+            @content;
+        }
+    } @else if $point == md {
+        @media (max-width: 840px) {
+            @content;
+        }
+    } @else if $point == sm {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $point == xs {
+        @media (max-width: 480px) {
+            @content;
+        }
 
-  }
+    }
 }
 
 @mixin grid-size($width) {
@@ -23,4 +29,10 @@
             width: $width;
         }
     }
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
 }

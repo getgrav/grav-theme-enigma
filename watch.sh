@@ -8,7 +8,7 @@
 SASS_SOURCE_PATH="scss"
 
 # sass options
-SASS_OPTIONS="--source-map=true --style=nested"
+SASS_OPTIONS="--source-map=false --style=nested"
 
 # css target
 CSS_TARGET_PATH="css-compiled"

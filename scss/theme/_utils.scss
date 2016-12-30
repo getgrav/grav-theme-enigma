@@ -1,0 +1,41 @@
+// Animated Mouse Scroller
+.mouse-scroller {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -17px;
+    width: 34px;
+    height: 55px;
+    border: 2px solid $body-font-color;
+    border-radius: 25px;
+
+    &:after {
+        display: block;
+        content: '';
+        opacity: 0.75;
+        margin-left: 12px;
+        margin-top: 10px;
+        width: 4px;
+        height: 10px;
+        border-radius: 25%;
+        background-color: $body-font-color;
+        animation-name: mouse-scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes mouse-scroll {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}

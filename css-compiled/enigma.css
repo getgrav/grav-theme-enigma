@@ -53,6 +53,40 @@
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease; }
 
+.mouse-scroller {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -17px;
+  width: 34px;
+  height: 55px;
+  border: 2px solid #666;
+  border-radius: 25px; }
+  .mouse-scroller:after {
+    display: block;
+    content: '';
+    opacity: 0.75;
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 4px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #666;
+    animation-name: mouse-scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-iteration-count: infinite; }
+
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0; }
+  10% {
+    transform: translateY(0);
+    opacity: 1; }
+  100% {
+    transform: translateY(15px);
+    opacity: 0; } }
+
 @media screen and (min-width: 1280px) {
   .grid-size {
     width: 1280px; } }
@@ -96,6 +130,7 @@
 
 #header {
   width: 100%;
+  top: 0;
   z-index: 2; }
   #header.scrolled {
     background: rgba(35, 34, 45, 0.9); }
@@ -200,21 +235,34 @@ div#breadcrumbs {
     padding-right: 10px; }
 
 #hero-header {
-  position: relative;
-  padding: 20rem 0;
-  background-size: cover;
-  background-position: center;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+  #hero-header > .container.wrapper {
+    position: relative;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%); }
+  #hero-header.hero-header-fullscreen {
+    height: 100vh; }
+  #hero-header.hero-header-large {
+    height: 700px; }
+  #hero-header.hero-header-medium {
+    height: 500px; }
+  #hero-header.hero-header-small {
+    height: 250px; }
+  #hero-header #hero-header-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; }
   #hero-header h1 {
     letter-spacing: -0.15rem; }
   #hero-header h4 {
     font-family: "Open Sans", sans-serif; }
   #hero-header.hero-padding {
     padding-top: 5rem; }
-  #hero-header.hero-header-image {
-    min-height: 500px; }
-    #hero-header.hero-header-image .blog-header-wrapper {
-      text-align: left; }
   #hero-header .hero-header-wrapper {
     position: absolute;
     top: 0;
@@ -222,20 +270,18 @@ div#breadcrumbs {
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%); }
-    #hero-header .hero-header-wrapper .container {
-      margin-top: 25rem; }
-    #hero-header .hero-header-wrapper h1 a {
+    #hero-header .hero-header-wrapper + .container h1 a {
       color: #fff; }
-      #hero-header .hero-header-wrapper h1 a:hover {
+      #hero-header .hero-header-wrapper + .container h1 a:hover {
         color: #eee; }
-    #hero-header .hero-header-wrapper time {
+    #hero-header .hero-header-wrapper + .container time {
       color: #fff;
       font-size: 120%;
       display: block; }
-    #hero-header .hero-header-wrapper .tags a {
+    #hero-header .hero-header-wrapper + .container .tags a {
       background: rgba(255, 255, 255, 0.8);
       color: #404040; }
-    #hero-header .hero-header-wrapper .label {
+    #hero-header .hero-header-wrapper + .container .label {
       font-size: 90%;
       padding: 0.2rem .5rem;
       display: inline-block; }
@@ -310,5 +356,3 @@ div#breadcrumbs {
         border-bottom: 1px solid #efefef; }
         #blog-body #sidebar .related-pages li .score {
           float: right; }
-
-/*# sourceMappingURL=../../../../workspace/grav-skeleton-blog/user/themes/enigma/css-compiled/enigma.css.map */

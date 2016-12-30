@@ -1,10 +1,37 @@
 // Large default blog header
 #hero-header {
-    position: relative;
-    padding: 20rem 0;
-    background-size: cover;
-    background-position: center;
     text-align: center;
+    position: relative;
+
+    > .container.wrapper {
+        @include vertical-align();
+    }
+
+    &.hero-header-fullscreen {
+        height: 100vh;
+    }
+
+    &.hero-header-large {
+        height: 700px;
+    }
+
+    &.hero-header-medium {
+        height: 500px;
+    }
+
+    &.hero-header-small {
+        height: 250px;
+    }
+
+    #hero-header-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
 
     h1 {
         letter-spacing: -0.15rem;
@@ -18,12 +45,6 @@
         padding-top: 5rem;
     }
 
-    &.hero-header-image {
-        min-height: 500px;
-        .blog-header-wrapper {
-            text-align: left;
-        }
-    }
 
     .hero-header-wrapper {
         position: absolute;
@@ -33,38 +54,37 @@
         bottom: 0;
         background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
 
-        .container {
-            margin-top: 25rem;
-        }
+        & + .container {
+            h1 a {
+                color: #fff;
+                &:hover {
+                    color: #eee;
+                }
+            }
 
-        h1 a {
-            color: #fff;
-            &:hover {
-                color: #eee;
+            time {
+                color: #fff;
+                font-size: 120%;
+                display: block;
+            }
+
+            .tags {
+                a {
+                    background: rgba(#fff, 0.8);
+                    color: $body-title-color;
+                }
+            }
+
+            .label {
+                font-size: 90%;
+                padding: 0.2rem .5rem;
+                display: inline-block;
             }
         }
-
-        time {
-            color: #fff;
-            font-size: 120%;
-            display: block;
-        }
-
-        .tags {
-            a {
-                background: rgba(#fff, 0.8);
-                color: $body-title-color;
-            }
-        }
-
-        .label {
-            font-size: 90%;
-            padding: 0.2rem .5rem;
-            display: inline-block;
-        }
-
 
     }
+
+
 }
 
 
@@ -188,4 +208,6 @@
         }
     }
 }
+
+
 
