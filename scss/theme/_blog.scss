@@ -7,7 +7,11 @@
     text-align: center;
 
     h1 {
-        font-weight: 600;
+        letter-spacing: -0.15rem;
+    }
+
+    h4 {
+        font-family: "Open Sans", sans-serif;
     }
 
     &.hero-padding {
@@ -72,7 +76,7 @@
 
         .blog-item {
             background: $content-background;
-            padding: $content-gutter $content-gutter $content-gutter;
+            padding: $content-gutter*1.5 $content-gutter;
             margin-bottom: $content-gutter;
             border: 1px solid $core-border-color;
 
@@ -91,7 +95,7 @@
     #listing {
 
         .blog-item-footer {
-            margin: $content-gutter*1.5 (-$content-gutter) (-$content-gutter);
+            margin: $content-gutter*1.5 (-$content-gutter) (-$content-gutter*1.5);
             padding: $content-gutter/2 $content-gutter;
             background: darken($content-background, 2%);
             border-top: 1px solid $core-border-color;

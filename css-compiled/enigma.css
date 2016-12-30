@@ -206,7 +206,9 @@ div#breadcrumbs {
   background-position: center;
   text-align: center; }
   #hero-header h1 {
-    font-weight: 600; }
+    letter-spacing: -0.15rem; }
+  #hero-header h4 {
+    font-family: "Open Sans", sans-serif; }
   #hero-header.hero-padding {
     padding-top: 5rem; }
   #hero-header.hero-header-image {
@@ -244,13 +246,13 @@ div#breadcrumbs {
     background: #f7f7f7; }
     #blog-body #item .blog-item, #blog-body #listing .blog-item {
       background: #ffffff;
-      padding: 3rem 3rem 3rem;
+      padding: 4.5rem 3rem;
       margin-bottom: 3rem;
       border: 1px solid #efefef; }
       #blog-body #item .blog-item h2, #blog-body #listing .blog-item h2 {
         margin-bottom: 3rem; }
   #blog-body #listing .blog-item-footer {
-    margin: 4.5rem -3rem -3rem;
+    margin: 4.5rem -3rem -4.5rem;
     padding: 1.5rem 3rem;
     background: #fafafa;
     border-top: 1px solid #efefef; }
