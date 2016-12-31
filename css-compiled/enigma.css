@@ -130,7 +130,6 @@
 
 #header {
   width: 100%;
-  top: 0;
   z-index: 2; }
   #header.scrolled {
     background: rgba(35, 34, 45, 0.9); }
@@ -255,10 +254,11 @@ div#breadcrumbs {
     top: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%; }
+    background-size: cover;
+    background-position: center; }
   #hero-header h1 {
-    letter-spacing: -0.15rem; }
+    letter-spacing: -0.15rem;
+    margin-top: 0; }
   #hero-header h4 {
     font-family: "Open Sans", sans-serif; }
   #hero-header.hero-padding {
@@ -285,60 +285,64 @@ div#breadcrumbs {
       font-size: 90%;
       padding: 0.2rem .5rem;
       display: inline-block; }
+    #hero-header .hero-header-wrapper ~ #to-start > .mouse-scroller {
+      border-color: #eee; }
+      #hero-header .hero-header-wrapper ~ #to-start > .mouse-scroller:after {
+        background-color: #eee; }
 
-#blog-body {
+#body-wrapper {
   background: linear-gradient(to right, #f7f7f7 0%, #f7f7f7 50%, #ffffff 50%, #ffffff 100%); }
-  #blog-body #item, #blog-body #listing {
+  #body-wrapper #item, #body-wrapper #listing {
     padding: 0 3rem 3rem;
     background: #f7f7f7; }
-    #blog-body #item .blog-item, #blog-body #listing .blog-item {
+    #body-wrapper #item .blog-item, #body-wrapper #listing .blog-item {
       background: #ffffff;
       padding: 4.5rem 3rem;
       margin-bottom: 3rem;
       border: 1px solid #efefef; }
-      #blog-body #item .blog-item h2, #blog-body #listing .blog-item h2 {
+      #body-wrapper #item .blog-item h2, #body-wrapper #listing .blog-item h2 {
         margin-bottom: 3rem; }
-  #blog-body #listing .blog-item-footer {
+  #body-wrapper #listing .blog-item-footer {
     margin: 4.5rem -3rem -4.5rem;
     padding: 1.5rem 3rem;
     background: #fafafa;
     border-top: 1px solid #efefef; }
-    #blog-body #listing .blog-item-footer time {
+    #body-wrapper #listing .blog-item-footer time {
       color: #404040; }
-    #blog-body #listing .blog-item-footer .tags {
+    #body-wrapper #listing .blog-item-footer .tags {
       margin-left: 1rem; }
-    #blog-body #listing .blog-item-footer .label {
+    #body-wrapper #listing .blog-item-footer .label {
       font-size: 90%;
       padding: 0.2rem .5rem;
       display: inline-block; }
-  #blog-body #listing-footer {
+  #body-wrapper #listing-footer {
     text-align: center; }
-    #blog-body #listing-footer .pagination {
+    #body-wrapper #listing-footer .pagination {
       margin: 0 auto; }
-      #blog-body #listing-footer .pagination li {
+      #body-wrapper #listing-footer .pagination li {
         border-color: #efefef;
         background: #ffffff; }
-  #blog-body #sidebar {
+  #body-wrapper #sidebar {
     padding: 6rem 3rem 3rem;
     background: #ffffff;
     border-left: 1px solid #efefef; }
-    #blog-body #sidebar h4 {
+    #body-wrapper #sidebar h4 {
       font-family: 'Montserrat', sans-serif;
       text-transform: uppercase;
       font-size: 1.3rem;
       margin-top: 0; }
-    #blog-body #sidebar .sidebar-content {
+    #body-wrapper #sidebar .sidebar-content {
       margin-bottom: 6rem; }
-    #blog-body #sidebar .tags .label {
+    #body-wrapper #sidebar .tags .label {
       font-size: 90%;
       padding: 0.2rem .5rem;
       display: inline-block;
       margin-right: -1px;
       margin-bottom: 2px; }
-    #blog-body #sidebar .archives {
+    #body-wrapper #sidebar .archives {
       list-style: none;
       margin-left: 0; }
-      #blog-body #sidebar .archives .label {
+      #body-wrapper #sidebar .archives .label {
         display: inline-block;
         margin-right: 1rem;
         border-radius: 0.2rem;
@@ -349,10 +353,10 @@ div#breadcrumbs {
         font-weight: 600;
         color: #fff;
         background-color: #8e44ad; }
-    #blog-body #sidebar .related-pages {
+    #body-wrapper #sidebar .related-pages {
       list-style: none;
       margin-left: 0; }
-      #blog-body #sidebar .related-pages li {
+      #body-wrapper #sidebar .related-pages li {
         border-bottom: 1px solid #efefef; }
-        #blog-body #sidebar .related-pages li .score {
+        #body-wrapper #sidebar .related-pages li .score {
           float: right; }

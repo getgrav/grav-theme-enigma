@@ -1,0 +1,15 @@
+{% set hero_image = page.media.images[theme.hero_header.image] %}
+<div id="hero-header" class="hero-header-{{ theme.hero_header.size }}" {% if theme.hero_header.color and not hero_image %}style="background-color:{{ theme.hero_header.color  }};"{% endif %}>
+    <div id="hero-header-image" style="background-image: url({{ hero_image.url }});" ></div>
+    {% block hero_wrapper %}
+    <div class="hero-header-wrapper"></div>
+    {% endblock %}
+    <div class="container wrapper grid-size">
+        {% block hero_content %}
+        {{ page.content }}
+        {% endblock %}
+    </div>
+    {% if theme.hero_header.size == 'fullscreen' %}
+        <a href="#" id="to-start"><div class="mouse-scroller"></div></a>
+    {% endif %}
+</div>

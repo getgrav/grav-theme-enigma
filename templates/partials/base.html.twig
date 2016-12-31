@@ -29,6 +29,7 @@
 
     {% block javascripts %}
         {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/smooth-scroll.min.js') %}
         {% do assets.addJs('theme://js/enigma.js') %}
     {% endblock %}
     {{ assets.js() }}

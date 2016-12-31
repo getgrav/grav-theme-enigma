@@ -29,12 +29,13 @@
         top: 0;
         height: 100%;
         width: 100%;
-        object-fit: cover;
-        object-position: 50% 50%;
+        background-size: cover;
+        background-position: center;
     }
 
     h1 {
         letter-spacing: -0.15rem;
+        margin-top: 0;
     }
 
     h4 {
@@ -80,6 +81,14 @@
                 padding: 0.2rem .5rem;
                 display: inline-block;
             }
+
+
+        }
+        & ~ #to-start > .mouse-scroller {
+            border-color: #eee;
+            &:after {
+                background-color: #eee;
+            }
         }
 
     }
@@ -88,7 +97,7 @@
 }
 
 
-#blog-body {
+#body-wrapper {
     background: linear-gradient(to right, $body-background 0%, $body-background 50%, $content-background 50%, $content-background 100%);
 
     #item, #listing {

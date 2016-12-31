@@ -1,22 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
 {% set collection = page.collection() %}
-{% set blog_image = page.media.images[theme.hero_header.image] %}
 
 {% block body %}
 <section id="body">
 
-    <div id="hero-header" class="hero-header-{{ theme.hero_header.size }}" {% if theme.hero_header.color %}style="background-color:{{ theme.hero_header.color  }};"{% endif %}>
-        <img id="hero-header-image" src="{{ blog_image.url }}" />
-        <div class="container wrapper grid-size">
-            {{ page.content }}
-        </div>
-        {% if theme.hero_header.size == 'fullscreen' %}
-            <div class="mouse-scroller"></div>
-        {% endif %}
-    </div>
+    {% embed 'partials/hero-header.html.twig' %}
+        {% block hero_wrapper %}{% endblock %}
+    {% endembed %}
 
-    <div id="blog-body">
+    <div id="body-wrapper">
         <div class="container wrapper grid-size">
             <div class="columns">
                 <div id="listing" class="column col-8 col-md-12">
