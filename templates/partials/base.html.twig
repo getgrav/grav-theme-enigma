@@ -38,7 +38,7 @@
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
     {% block header %}
-    <header id="header" class="fixed">
+    <header id="header" class="fixed {{ theme.header.style }}">
         <div class="container wrapper grid-size">
             <div class="columns cols-gapless">
                 <div id="logo" class="column col-6 col-md-12">
@@ -60,7 +60,7 @@
     {% endblock %}
     {% block showcase %}{% endblock %}
     {% block body %}
-    <section id="body">
+    <section id="body" {% if theme.hero.size is same as(false) %}class="no-hero"{% endif %}>
         <div class="container wrapper grid-size">
             {% block content %}{% endblock %}
         </div>
@@ -77,7 +77,7 @@
         </div>
     </footer>
     {% endblock %}
-{% block bottom %}
+    {% block bottom %}
         {{ assets.js('bottom') }}
     {% endblock %}
 </body>

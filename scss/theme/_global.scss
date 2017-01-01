@@ -22,7 +22,7 @@ $max_font: 11;
 }
 
 // Color variations
-.header-light {
+#header.light {
     #logo svg path {
         fill: #fff !important;
 
@@ -45,7 +45,7 @@ $max_font: 11;
     }
 }
 
-.header-dark {
+#header.dark {
     #logo svg path {
         fill: #000 !important;
 
@@ -72,7 +72,7 @@ $max_font: 11;
 #header {
     @extend .default-animation;
     width: 100%;
-    //top: 0;
+    top: 0;
     z-index: 2;
 
     &.scrolled {
@@ -108,6 +108,15 @@ $max_font: 11;
                 }
             }
         }
+    }
+}
+
+// Body
+#body.no-hero {
+    padding-top: 8rem;
+
+    #sidebar {
+        border-top: 1px solid $core-border-color;
     }
 }
 

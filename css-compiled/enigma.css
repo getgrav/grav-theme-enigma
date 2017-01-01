@@ -102,34 +102,35 @@
   :root {
     font-size: 11px; } }
 
-.header-light #logo svg path {
+#header.light #logo svg path {
   fill: #fff !important; }
 
-.header-light #navbar ul li.active a {
+#header.light #navbar ul li.active a {
   color: #fff; }
 
-.header-light #navbar ul li a {
+#header.light #navbar ul li a {
   color: #eee; }
-  .header-light #navbar ul li a:hover {
+  #header.light #navbar ul li a:hover {
     color: #fff; }
-  .header-light #navbar ul li a:before {
+  #header.light #navbar ul li a:before {
     background-color: #fff; }
 
-.header-dark #logo svg path {
+#header.dark #logo svg path {
   fill: #000 !important; }
 
-.header-dark #navbar ul li.active a {
+#header.dark #navbar ul li.active a {
   color: #000; }
 
-.header-dark #navbar ul li a {
+#header.dark #navbar ul li a {
   color: #333; }
-  .header-dark #navbar ul li a:hover {
+  #header.dark #navbar ul li a:hover {
     color: #000; }
-  .header-dark #navbar ul li a:before {
+  #header.dark #navbar ul li a:before {
     background-color: #000; }
 
 #header {
   width: 100%;
+  top: 0;
   z-index: 2; }
   #header.scrolled {
     background: rgba(35, 34, 45, 0.9); }
@@ -147,6 +148,11 @@
           color: #fff; }
         #header.scrolled #navbar ul li a:before {
           background-color: #fff; }
+
+#body.no-hero {
+  padding-top: 8rem; }
+  #body.no-hero #sidebar {
+    border-top: 1px solid #efefef; }
 
 #footer {
   background: #23222d;
@@ -248,6 +254,8 @@ div#breadcrumbs {
     height: 500px; }
   #hero-header.hero-header-small {
     height: 250px; }
+  #hero-header.hero-header-tiny {
+    height: 8rem; }
   #hero-header #hero-header-image {
     display: block;
     position: absolute;
@@ -300,21 +308,26 @@ div#breadcrumbs {
       padding: 4.5rem 3rem;
       margin-bottom: 3rem;
       border: 1px solid #efefef; }
-      #body-wrapper #item .blog-item h2, #body-wrapper #listing .blog-item h2 {
+      #body-wrapper #item .blog-item h1, #body-wrapper #item .blog-item h2, #body-wrapper #listing .blog-item h1, #body-wrapper #listing .blog-item h2 {
         margin-bottom: 3rem; }
-  #body-wrapper #listing .blog-item-footer {
-    margin: 4.5rem -3rem -4.5rem;
+  #body-wrapper #item h1 a {
+    color: #404040; }
+  #body-wrapper .blog-item-header, #body-wrapper .blog-item-footer {
     padding: 1.5rem 3rem;
-    background: #fafafa;
-    border-top: 1px solid #efefef; }
-    #body-wrapper #listing .blog-item-footer time {
-      color: #404040; }
-    #body-wrapper #listing .blog-item-footer .tags {
-      margin-left: 1rem; }
-    #body-wrapper #listing .blog-item-footer .label {
+    background: #fafafa; }
+    #body-wrapper .blog-item-header time, #body-wrapper .blog-item-footer time {
+      color: #404040;
+      margin-right: 1rem; }
+    #body-wrapper .blog-item-header .label, #body-wrapper .blog-item-footer .label {
       font-size: 90%;
       padding: 0.2rem .5rem;
       display: inline-block; }
+  #body-wrapper .blog-item-header {
+    margin: -4.5rem -3rem 4.5rem;
+    border-bottom: 1px solid #efefef; }
+  #body-wrapper .blog-item-footer {
+    margin: 4.5rem -3rem -4.5rem;
+    border-top: 1px solid #efefef; }
   #body-wrapper #listing-footer {
     text-align: center; }
     #body-wrapper #listing-footer .pagination {

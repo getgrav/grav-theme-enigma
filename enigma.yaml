@@ -1,9 +1,16 @@
 enabled: true
-body_classes:                       # header-light|header-dark
-hero_header:
+header:
+    style: default                  # default|dark|light
+hero:
     image: page-header.jpg          # Use this image to be the page header
     color: '#913D88'                # Color
-    size: fullscreen                # small|medium|fullscreen
-    date: true                      # display date
-    taxonomy: true                  # display taxonomy
-
+    size: fullscreen                # small|medium|fullscreen|none
+blog:
+    listing:
+        date: footer                # header|footer|off
+        taxonomy: footer            # header|footer|off
+        continue: footer            # header|footer|off
+    item:
+        title: hero                 # hero|content|off
+        date: hero                  # hero|header|footer|off
+        taxonomy: hero              # hero|header|footer|off

@@ -1,14 +1,38 @@
 <div class="blog-item h-entry">
+    {% if theme.blog.listing.date == 'header' or
+          theme.blog.listing.taxonomy == 'header' or
+          theme.blog.listing.continue == 'header' %}
+    <div class="blog-item-header">
+        {% if not page.header.link and theme.blog.listing.continue == 'header' %}
+            <a class="float-right" href="{{ page.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a>
+        {% endif %}
+        {% if theme.blog.listing.date == 'header' %}
+            {% include 'partials/blog/date.html.twig' %}
+        {% endif %}
+        {% if theme.blog.listing.taxonomy == 'header' %}
+            {% include 'partials/blog/taxonomy.html.twig' %}
+        {% endif %}
+    </div>
+    {% endif %}
+
     {% include 'partials/blog/title.html.twig' %}
 
     {% include 'partials/blog/page-summary.html.twig' %}
 
-    <div class="blog-item-footer">
-        {% if not page.header.link %}
-        <a class="float-right" href="{{ page.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a>
+    {% if theme.blog.listing.date == 'footer' or
+          theme.blog.listing.taxonomy == 'footer' or
+          theme.blog.listing.continue == 'footer' %}
+    <div class="blog-item-footer clearfix">
+        {% if not page.header.link and theme.blog.listing.continue == 'footer' %}
+            <a class="float-right" href="{{ page.url }}">{{ 'BLOG.ITEM.CONTINUE_READING'|t }}</a>
         {% endif %}
-        {% include 'partials/blog/date.html.twig' %}
-        {% include 'partials/blog/taxonomy.html.twig' %}
+        {% if theme.blog.listing.date == 'footer' %}
+            {% include 'partials/blog/date.html.twig' %}
+        {% endif %}
+        {% if theme.blog.listing.taxonomy == 'footer' %}
+            {% include 'partials/blog/taxonomy.html.twig' %}
+        {% endif %}
     </div>
+    {% endif %}
 
 </div>

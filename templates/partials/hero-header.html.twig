@@ -1,6 +1,6 @@
-{% set hero_image = page.media.images[theme.hero_header.image] %}
-<div id="hero-header" class="hero-header-{{ theme.hero_header.size }}" {% if theme.hero_header.color and not hero_image %}style="background-color:{{ theme.hero_header.color  }};"{% endif %}>
-    <div id="hero-header-image" style="background-image: url({{ hero_image.url }});" ></div>
+{% set hero_image = page.media.images[theme.hero.image] %}
+<div id="hero-header" class="hero-header-{{ theme.hero.size }}" {% if theme.hero.color and not hero_image %}style="background-color:{{ theme.hero.color  }};"{% endif %}>
+    <div id="hero-header-image" {% if hero_image %}style="background-image: url({{ hero_image.url }});"{% endif %} ></div>
     {% block hero_wrapper %}
     <div class="hero-header-wrapper"></div>
     {% endblock %}
@@ -9,7 +9,7 @@
         {{ page.content }}
         {% endblock %}
     </div>
-    {% if theme.hero_header.size == 'fullscreen' %}
+    {% if theme.hero.size == 'fullscreen' %}
         <a href="#" id="to-start"><div class="mouse-scroller"></div></a>
     {% endif %}
 </div>

@@ -9,48 +9,27 @@ class Enigma extends Theme
     {
         return [
             'onThemeInitialized' => ['onThemeInitialized', 0],
-            'onPageInitialized' => ['onPageInitialized', 0],
         ];
     }
 
     public function onThemeInitialized()
     {
+        if ($this->isAdmin()) {
+            return;
+        }
 
+        $this->enable([
+            'onPagesInitialized' => ['onPagesInitialized', 0],
+        ]);
     }
 
-    public function onPageInitialized()
+    public function onPagesInitialized()
     {
         $page = $this->grav['page'];
 
-        $header = $page->header();
-        $new_config = $this->config->get('theme');
-
-        $options = [
-            'theme_class',
-            'hero_header' => ['size', 'color', 'image', 'date', 'taxonomy'],
-        ];
-
-        foreach ($options as $key => $option) {
-            if (is_int($key)) {
-                $key = $option;
-            }
-            if (isset($header->$key)) {
-                $element = $header->$key;
-                if (is_array($option)) {
-                    foreach ($option as $item) {
-                        if (isset($element[$item])) {
-                            $new_config[$key][$item] = $element[$item];
-                        }
-                    }
-                } else {
-                    $new_config[$key] = $element;
-                }
-            }
-        }
-
         // If a page exists merge the configs
         if ($page) {
-            $this->config->set('theme', $new_config);
+            $this->config->set('theme', $this->mergeConfig($page));
         }
     }
 }

@@ -1,20 +1,23 @@
 {% extends 'partials/base.html.twig' %}
 
-
 {% block body %}
-<section id="body">
+<section id="body" {% if theme.hero.size is same as(false) %}class="no-hero"{% endif %}>
 
+    {% if theme.hero.size is not same as(false) %}
     {% embed 'partials/hero-header.html.twig' %}
         {% block hero_content %}
-            {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
-            {% if theme.hero_header.date %}
+            {% if theme.blog.item.title == 'hero' %}
+                {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
+            {% endif %}
+            {% if theme.blog.item.date == 'hero' %}
                 {% include 'partials/blog/date.html.twig' %}
             {% endif %}
-            {% if theme.hero_header.taxonomy %}
+            {% if theme.blog.item.taxonomy == 'hero' %}
                 {% include 'partials/blog/taxonomy.html.twig' %}
             {% endif %}
         {% endblock %}
     {% endembed %}
+    {% endif %}
 
     <div id="body-wrapper">
         <div class="container wrapper grid-size">

@@ -23,6 +23,10 @@
         height: 250px;
     }
 
+    &.hero-header-tiny {
+        height: 8rem;
+    }
+
     #hero-header-image {
         display: block;
         position: absolute;
@@ -110,42 +114,52 @@
             margin-bottom: $content-gutter;
             border: 1px solid $core-border-color;
 
-            h2 {
+            h1, h2 {
                 margin-bottom: 3rem;
             }
         }
-
     }
 
     #item {
-        p {
-        }
-    }
-
-    #listing {
-
-        .blog-item-footer {
-            margin: $content-gutter*1.5 (-$content-gutter) (-$content-gutter*1.5);
-            padding: $content-gutter/2 $content-gutter;
-            background: darken($content-background, 2%);
-            border-top: 1px solid $core-border-color;
-
-            time {
+        h1 {
+            a {
                 color: $body-title-color;
             }
 
-            .tags {
-                margin-left: 1rem;
-            }
+        }
+    }
 
-            .label {
-                font-size: 90%;
-                padding: 0.2rem .5rem;
-                display: inline-block;
-            }
+    .blog-item-header, .blog-item-footer {
+        padding: $content-gutter/2 $content-gutter;
+        background: darken($content-background, 2%);
+
+        time {
+            color: $body-title-color;
+            margin-right: 1rem;
         }
 
+        .label {
+            font-size: 90%;
+            padding: 0.2rem .5rem;
+            display: inline-block;
+        }
     }
+
+
+    .blog-item-header {
+        margin: (-$content-gutter*1.5) (-$content-gutter) $content-gutter*1.5;
+        border-bottom: 1px solid $core-border-color;
+
+
+    }
+
+
+    .blog-item-footer {
+        margin: $content-gutter*1.5 (-$content-gutter) (-$content-gutter*1.5);
+        border-top: 1px solid $core-border-color;
+    }
+
+
 
     #listing-footer {
         text-align: center;

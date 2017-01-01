@@ -3,9 +3,9 @@
 {% set collection = page.collection() %}
 
 {% block body %}
-<section id="body">
+<section id="body" {% if theme.hero.size is same as(false) %}class="no-hero"{% endif %}>
 
-    {% embed 'partials/hero-header.html.twig' %}
+    {% embed 'partials/hero-header.html.twig'%}
         {% block hero_wrapper %}{% endblock %}
     {% endembed %}
 
