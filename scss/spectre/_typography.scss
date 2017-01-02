@@ -5,7 +5,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $title-font-family;
     color: $body-title-color;
     font-weight: 300;
     line-height: 1.1;
@@ -26,7 +26,7 @@ h3 {
 }
 
 h4 {
-    font-family: "Open Sans", sans-serif;
+    font-family: $body-font-family;
     font-size: 2.4rem;
 }
 
@@ -47,9 +47,10 @@ strong, b {
 }
 
 blockquote {
-    border-left: .2rem solid #ddd;
+    border-left: 6px solid darken($core-border-color, 5%);
+    background: lighten($core-border-color, 4%);
     margin-left: 0;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     p:last-child {
         margin-bottom: 0;
     }
@@ -99,7 +100,7 @@ dl {
 }
 
 .caps-title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: $title-font-family;
     text-transform: uppercase;
     font-size: 1.3rem;
 }
@@ -116,9 +117,13 @@ img {
 }
 
 // Code
+pre, code {
+    font-family: $code-font-family;
+}
 pre {
     background: lighten($core-border-color, 4%);
-    border-left: .2rem solid darken($core-border-color, 5%);
+    border: 6px solid darken($core-border-color, 5%);
+    border-width: 6px 0;
     line-height: 1.8rem;
     margin-bottom: 1em;
     margin-top: 1em;

@@ -31,7 +31,7 @@ a {
 }
 
 // Disabled state
-&[disabled],
+*[disabled],
 .disabled {
     cursor: default;
     opacity: .75;

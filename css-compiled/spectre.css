@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,600|Cousine);
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -394,7 +394,7 @@ a {
   a:focus, a:hover {
     color: #432051; }
 
-[disabled],
+*[disabled],
 .disabled {
   cursor: default;
   opacity: .75;
@@ -406,7 +406,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #404040;
   font-weight: 300;
   line-height: 1.1;
@@ -439,9 +439,10 @@ strong, b {
   font-weight: 600; }
 
 blockquote {
-  border-left: .2rem solid #ddd;
+  border-left: 6px solid #e3e3e3;
+  background: #fafafa;
   margin-left: 0;
-  padding: 1rem 2rem; }
+  padding: 0.5rem 2rem; }
   blockquote p:last-child {
     margin-bottom: 0; }
   blockquote cite {
@@ -480,7 +481,7 @@ dl dd {
   font-size: 120%; }
 
 .caps-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 1.3rem; }
 
@@ -496,9 +497,13 @@ mark,
 img {
   max-width: 100%; }
 
+pre, code {
+  font-family: "Cousine", monospace; }
+
 pre {
   background: #fafafa;
-  border-left: 0.2rem solid #e3e3e3;
+  border: 6px solid #e3e3e3;
+  border-width: 6px 0;
   line-height: 1.8rem;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -2414,3 +2419,5 @@ textarea.form-input,
     position: absolute;
     top: 50%;
     width: 1.6rem; }
+
+/*# sourceMappingURL=../css-compiled/spectre.css.map */
