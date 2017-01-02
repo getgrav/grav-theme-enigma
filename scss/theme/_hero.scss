@@ -1,0 +1,129 @@
+#hero-header {
+    text-align: center;
+    position: relative;
+
+    &[style*='none'] {
+        .hero-header-wrapper {
+            display: none;
+        }
+        .container {
+            h1 {
+                color: $body-title-color !important;
+
+                & + h4 {
+                    color: lighten($body-title-color, 20%) !important;
+                }
+            }
+        }
+
+    }
+
+    > .container.wrapper {
+        @include vertical-align();
+    }
+
+    &.hero-header-fullscreen {
+        height: 100vh;
+    }
+
+    &.hero-header-large {
+        height: 700px;
+    }
+
+    &.hero-header-medium {
+        height: 500px;
+        padding-top: 1rem;
+    }
+
+    &.hero-header-small {
+        height: 300px;
+        padding-top: 3rem;
+    }
+
+    &.hero-header-tiny {
+        height: 8rem;
+    }
+
+    #hero-header-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    h1 {
+        letter-spacing: -0.15rem;
+        margin-top: 0;
+    }
+
+    h4 {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    &.hero-padding {
+        padding-top: 5rem;
+    }
+
+
+    .hero-header-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+
+        & + .container {
+            h1 {
+                color: #fff;
+                a {
+                    color: #fff;
+                    &:hover {
+                        color: #eee;
+                    }
+                }
+
+                & + h4 {
+                    color: #ddd;
+                    margin-bottom: 0;
+                    margin-top: -0.5rem;
+                }
+            }
+
+
+
+            time {
+                color: #fff;
+                font-size: 120%;
+                display: block;
+            }
+
+            .tags {
+                a {
+                    background: rgba(#fff, 0.8);
+                    color: $body-title-color;
+                }
+            }
+
+            .label {
+                font-size: 90%;
+                padding: 0.2rem .5rem;
+                display: inline-block;
+            }
+
+
+        }
+        & ~ #to-start > .mouse-scroller {
+            border-color: #eee;
+            &:after {
+                background-color: #eee;
+            }
+        }
+
+    }
+
+
+}

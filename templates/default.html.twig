@@ -1,5 +1,21 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{{ page.content }}
+<div class="columns">
+    <div id="item" class="column col-12">
+        {% if theme.default.show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+        <div class="content-item">
+            {% if theme.default.title == 'content' %}
+                <h1 class="mt-0">{{ page.title }}</h1>
+                {% if page.header.subtitle %}
+                    <h4>{{ page.header.subtitle }}</h4>
+                {% endif %}
+            {% endif %}
+            {{ page.content }}
+        </div>
+    </div>
+</div>
 {% endblock %}
+

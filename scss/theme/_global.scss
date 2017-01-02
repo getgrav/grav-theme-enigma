@@ -113,10 +113,33 @@ $max_font: 11;
 
 // Body
 #body.no-hero {
-    padding-top: 8rem;
+    padding-top: 5rem;
+}
 
-    #sidebar {
-        border-top: 1px solid $core-border-color;
+#header.fixed + #body.no-hero {
+    padding-top: 13rem;
+}
+
+.content-item {
+    background: $content-background;
+    padding: $content-gutter*1.5 $content-gutter;
+    margin-bottom: $content-gutter;
+    border: 1px solid $core-border-color;
+
+    h1, h2 {
+        margin-bottom: 3rem;
+    }
+}
+
+#item {
+    padding: 0 $content-gutter $content-gutter;
+    background: $body-background;
+
+    h1, h2 {
+        a {
+            color: $body-title-color;
+        }
+
     }
 }
 

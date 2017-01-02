@@ -1,4 +1,3 @@
-{{ dump(theme) }}
 <!DOCTYPE html>
 <html lang="{{ html_lang }}">
 <head>
@@ -38,7 +37,7 @@
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
     {% block header %}
-    <header id="header" class="fixed {{ theme.header.style }}">
+    <header id="header" class="{{ theme.header.position }} {{ theme.header.style }}">
         <div class="container wrapper grid-size">
             <div class="columns cols-gapless">
                 <div id="logo" class="column col-6 col-md-12">
@@ -61,8 +60,34 @@
     {% block showcase %}{% endblock %}
     {% block body %}
     <section id="body" {% if theme.hero.size is same as(false) %}class="no-hero"{% endif %}>
-        <div class="container wrapper grid-size">
-            {% block content %}{% endblock %}
+        {% if theme.hero.size is not same as(false) %}
+        {% set hero_image = page.media.images[theme.hero.image] %}
+        <div id="hero-header" class="hero-header-{{ theme.hero.size }}" {% if theme.hero.color and not hero_image %}style="background-color:{{ theme.hero.color  }};"{% endif %}>
+            <div id="hero-header-image" {% if hero_image %}style="background-image: url({{ hero_image.url }});"{% endif %} ></div>
+            {% block hero_wrapper %}
+                <div class="hero-header-wrapper"></div>
+            {% endblock %}
+            <div class="container wrapper grid-size">
+                {% block hero_content %}
+                    {% if theme.default.title == 'hero' %}
+                        <h1>{{ page.title }}</h1>
+                        {% if page.header.subtitle %}
+                        <h4>{{ page.header.subtitle }}</h4>
+                        {% endif %}
+                    {% endif %}
+                {% endblock %}
+            </div>
+            {% if theme.hero.size == 'fullscreen' %}
+                <a href="#" id="to-start"><div class="mouse-scroller"></div></a>
+            {% endif %}
+        </div>
+        {% endif %}
+        <div id="body-wrapper">
+            <div class="container wrapper grid-size">
+                {% block content %}
+
+                {% endblock %}
+            </div>
         </div>
     </section>
     {% endblock %}
