@@ -10,9 +10,9 @@ default:
     title: hero                     # hero|content|off
     show_breadcrumbs: true          # show or hide breadcrumbs
 blog:
-    title: hero                 # hero|content|off (only on blog item)
-    date: hero                  # hero|header|footer|off
-    taxonomy: hero              # hero|header|footer|off
-    continue: footer            # header|footer|off (only on blog listing)
-    show_sidebar: true          # show or hide the sidebar
-    show_nav: true              # show or hide the prev/next navigation (only on blog item)
+    title: hero                     # hero|content|off (only on blog item)
+    date: hero                      # hero|header|footer|off
+    taxonomy: hero                  # hero|header|footer|off
+    continue: footer                # header|footer|off (only on blog listing)
+    show_sidebar: true              # show or hide the sidebar
+    show_nav: true                  # show or hide the prev/next navigation (only on blog item)
