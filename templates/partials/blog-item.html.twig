@@ -13,10 +13,12 @@
     {% endif %}
 
     {% if theme.blog.title == 'content' %}
-        {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
-        {% if page.header.subtitle %}
-                <h4>{{ page.header.subtitle }}</h4>
-        {% endif %}
+        <div class="content-title text-center">
+            {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
+            {% if page.header.subtitle %}
+            <h4>{{ page.header.subtitle }}</h4>
+            {% endif %}
+        </div>
     {% endif %}
 
     {% include 'partials/blog/page-full.html.twig' %}

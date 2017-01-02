@@ -127,8 +127,16 @@ $max_font: 11;
     border: 1px solid $core-border-color;
 
     h1, h2 {
-        margin-bottom: 3rem;
+        margin: 0;
+
+        & + h4 {
+            margin: 0;
+        }
     }
+}
+
+.content-title {
+    margin-bottom: 5rem;
 }
 
 #item {

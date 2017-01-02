@@ -161,7 +161,12 @@
   margin-bottom: 3rem;
   border: 1px solid #efefef; }
   .content-item h1, .content-item h2 {
-    margin-bottom: 3rem; }
+    margin: 0; }
+    .content-item h1 + h4, .content-item h2 + h4 {
+      margin: 0; }
+
+.content-title {
+  margin-bottom: 5rem; }
 
 #item {
   padding: 0 3rem 3rem;
@@ -289,9 +294,9 @@ div#breadcrumbs {
     background-position: center; }
   #hero-header h1 {
     letter-spacing: -0.15rem;
-    margin-top: 0; }
+    margin: 0; }
   #hero-header h4 {
-    font-family: "Open Sans", sans-serif; }
+    margin: 0.5rem 0 0; }
   #hero-header.hero-padding {
     padding-top: 5rem; }
   #hero-header .hero-header-wrapper {
@@ -308,9 +313,7 @@ div#breadcrumbs {
         #hero-header .hero-header-wrapper + .container h1 a:hover {
           color: #eee; }
       #hero-header .hero-header-wrapper + .container h1 + h4 {
-        color: #ddd;
-        margin-bottom: 0;
-        margin-top: -0.5rem; }
+        color: #ddd; }
     #hero-header .hero-header-wrapper + .container time {
       color: #fff;
       font-size: 120%;

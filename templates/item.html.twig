@@ -2,10 +2,12 @@
 
 {% block hero_content %}
     {% if theme.blog.title == 'hero' %}
+        <div class="content-title">
         {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
         {% if page.header.subtitle %}
             <h4>{{ page.header.subtitle }}</h4>
         {% endif %}
+        </div>
     {% endif %}
     {% if theme.blog.date == 'hero' %}
         {% include 'partials/blog/date.html.twig' %}
