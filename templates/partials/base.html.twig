@@ -10,19 +10,10 @@
     <link rel="canonical" href="{{ page.canoncial }}" />
 
     {% block stylesheets %}
-        {% do assets.addCss('theme://css/pure-0.5.0/grids-min.css', 103) %}
         {% do assets.addCss('theme://css-compiled/spectre.css', 102) %}
         {% do assets.addCss('theme://css-compiled/enigma.css', 101) %}
         {% do assets.addCss('theme://css/custom.css', 100) %}
         {% do assets.addCss('theme://css/font-awesome.min.css', 100) %}
-
-        {% if browser.getBrowser == 'msie' and browser.getVersion == 10 %}
-            {% do assets.addCss('theme://css/nucleus-ie10.css') %}
-        {% endif %}
-        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
-            {% do assets.addCss('theme://css/nucleus-ie9.css') %}
-            {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
-        {% endif %}
     {% endblock %}
     {{ assets.css() }}
 
