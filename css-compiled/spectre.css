@@ -411,7 +411,7 @@ h6 {
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  margin-top: 2.5rem; }
+  margin-top: 3.5rem; }
 
 h1 {
   font-size: 5rem; }
@@ -450,7 +450,7 @@ blockquote {
 
 ul,
 ol {
-  margin: 2rem 0 2rem 2rem;
+  margin: 2rem 0 2rem 4rem;
   padding: 0; }
   ul ul,
   ul ol,
@@ -462,12 +462,12 @@ ol {
     margin-top: 1rem; }
 
 ul {
-  list-style: disc inside; }
+  list-style: disc outside; }
   ul ul {
     list-style-type: circle; }
 
 ol {
-  list-style: decimal inside; }
+  list-style: decimal outside; }
   ol ol {
     list-style-type: lower-alpha; }
 
@@ -516,7 +516,8 @@ code {
   display: inline;
   font-size: 1em;
   padding: .1em .3em;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  font-size: 1.4rem; }
   pre code {
     background: transparent;
     border-left: 0;

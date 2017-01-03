@@ -61,9 +61,9 @@
             <div class="container wrapper grid-size">
                 {% block hero_content %}
                     {% if theme.default.title == 'hero' %}
-                        <h1>{{ page.title }}</h1>
+                        <h1>{{ page.title|markdown }}</h1>
                         {% if page.header.subtitle %}
-                        <h4>{{ page.header.subtitle }}</h4>
+                        <h4>{{ page.header.subtitle|markdown }}</h4>
                         {% endif %}
                     {% endif %}
                 {% endblock %}

@@ -275,13 +275,13 @@ div#breadcrumbs {
   #hero-header.hero-header-fullscreen {
     height: 100vh; }
   #hero-header.hero-header-large {
-    height: 700px; }
+    height: 500px; }
   #hero-header.hero-header-medium {
-    height: 500px;
-    padding-top: 1rem; }
-  #hero-header.hero-header-small {
-    height: 300px;
+    height: 400px;
     padding-top: 3rem; }
+  #hero-header.hero-header-small {
+    height: 250px;
+    padding-top: 6rem; }
   #hero-header.hero-header-tiny {
     height: 8rem; }
   #hero-header #hero-header-image {
