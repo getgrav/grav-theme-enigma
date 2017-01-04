@@ -126,13 +126,11 @@ $max_font: 11;
     margin-bottom: $content-gutter;
     border: 1px solid $core-border-color;
 
-    h1, h2 {
-        margin: 0;
-
-        & + h4 {
-            margin: 0;
-        }
+    h1 + h4 {
+        margin-top: -1rem;
+        margin-bottom: 3rem;
     }
+
 }
 
 .content-title {

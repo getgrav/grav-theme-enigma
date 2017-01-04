@@ -160,10 +160,9 @@
   padding: 4.5rem 3rem;
   margin-bottom: 3rem;
   border: 1px solid #efefef; }
-  .content-item h1, .content-item h2 {
-    margin: 0; }
-    .content-item h1 + h4, .content-item h2 + h4 {
-      margin: 0; }
+  .content-item h1 + h4 {
+    margin-top: -1rem;
+    margin-bottom: 3rem; }
 
 .content-title {
   margin-bottom: 5rem; }
