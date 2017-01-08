@@ -103,7 +103,7 @@ fr:
     SYNDICATE:
       HEADLINE: Syndication
   FORM_DATA:
-    SUMMARY: "Voici le résumé de ce que vous avez écrit pour nous:"
+    SUMMARY: "Voici le résumé de ce que vous avez écrit pour nous :"
   ERROR: Erreur
 
 it:
