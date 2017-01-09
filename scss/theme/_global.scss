@@ -126,6 +126,10 @@ $max_font: 11;
     margin-bottom: $content-gutter;
     border: 1px solid $core-border-color;
 
+    .e-content > h1 {
+        margin-bottom: 3rem;
+    }
+
     h1 + h4 {
         margin-top: -1rem;
         margin-bottom: 3rem;
