@@ -51,41 +51,34 @@
     {% block showcase %}{% endblock %}
     {% block body %}
     <section id="body" {% if theme.hero.size is same as(false) %}class="no-hero"{% endif %}>
-        {% if theme.hero.size is not same as(false) %}
-
-            {% set hero_size = theme.hero.size %}
-            {% set hero_image = page.media.images[theme.hero.image] %}
-            {% set hero_color = hero_image ? false : theme.hero.color %}
-            {% set hero_style = theme.hero.style ?: 'dark' %}
-
-            <div id="hero-header" class="hero-header-{{ hero_size }} hero-header-{{ hero_style }}{{ theme.hero.overlay ? ' hero-header-overlay' : '' }}{{ hero_color ? ' hero-header-color' : ''  }}{{ hero_image ? ' hero-header-image' : '' }}" {% if hero_color %}style="background-color:{{ hero_color  }};"{% endif %}>
-                <div id="hero-header-image" {% if hero_image %}style="background-image: url({{ hero_image.url }});"{% endif %} ></div>
-                {% block hero_wrapper %}
-                    {% if theme.hero.overlay %}
-                        <div class="hero-header-wrapper"></div>
-                    {% endif %}
-                {% endblock %}
-                <div class="container wrapper grid-size">
-                    {% block hero_content %}
-                        {% if theme.default.title == 'hero' %}
-                            <h1>{{ page.title|markdown }}</h1>
-                            {% if page.header.subtitle %}
-                                <h4>{{ page.header.subtitle|markdown }}</h4>
-                            {% endif %}
-                        {% endif %}
-                    {% endblock %}
-                </div>
-                {% if theme.hero.size == 'fullscreen' %}
-                    <a href="#" id="to-start"><div class="mouse-scroller"></div></a>
-                {% endif %}
-            </div>
-        {% endif %}
+        {% block hero %}
+            {% embed 'partials/hero.html.twig' %}{% endembed %}
+        {% endblock %}
         <div id="body-wrapper">
+            {% block body_wrapper %}
             <div class="container wrapper grid-size">
                 {% block content %}
-
+                    <div class="columns">
+                        <div id="item" class="column col-12">
+                            {% if theme.default.show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                                {% include 'partials/breadcrumbs.html.twig' %}
+                            {% endif %}
+                            <div class="content-item">
+                                {% if theme.default.title == 'content' %}
+                                    <div class="content-title text-center">
+                                        <h1 class="mt-0">{{ page.title|markdown }}</h1>
+                                        {% if page.header.subtitle %}
+                                            <h4>{{ page.header.subtitle|markdown }}</h4>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                                {{ page.content }}
+                            </div>
+                        </div>
+                    </div>
                 {% endblock %}
             </div>
+            {% endblock %}
         </div>
     </section>
     {% endblock %}

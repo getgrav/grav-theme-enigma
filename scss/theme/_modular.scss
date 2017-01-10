@@ -1,0 +1,12 @@
+@import "modular/features";
+@import "modular/text";
+
+.modular-item {
+    padding: 3rem 0;
+
+    h2 + h4 {
+        margin-top: -1rem;
+        margin-bottom: 4rem;
+        color: lighten($body-title-color, 10%);
+    }
+}

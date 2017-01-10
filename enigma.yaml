@@ -4,17 +4,19 @@ header:
     style: default                  # default|dark|light
 hero:
     image: page-header.jpg          # Use this image to be the page header
-    overlay: true                  # Overlay hero header with transparent gradient
+    overlay: true                   # Overlay hero header with transparent gradient
     style: dark                     # dark|light
     color:                          # Default hero color
     size: small                     # small|medium|fullscreen|none
 default:
     title: hero                     # hero|content|off
     show_breadcrumbs: true          # show or hide breadcrumbs
+modular:
+    show_onpage_menu: true          # show on-page menu
 blog:
     title: hero                     # hero|content|off (only on blog item)
-    date: header                      # hero|header|footer|off
-    taxonomy: header                  # hero|header|footer|off
+    date: header                    # hero|header|footer|off
+    taxonomy: header                # hero|header|footer|off
     continue: footer                # header|footer|off (only on blog listing)
     show_sidebar: true              # show or hide the sidebar
     show_nav: true                  # show or hide the prev/next navigation (only on blog item)

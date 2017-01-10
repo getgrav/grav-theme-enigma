@@ -2,8 +2,12 @@
 
 {% set collection = page.collection() %}
 
-{% block hero_content %}
-    {{ page.content }}
+{% block hero %}
+    {% embed 'partials/hero.html.twig' %}
+        {% block hero_content %}
+            {{ page.content }}
+        {% endblock %}
+    {% endembed %}
 {% endblock %}
 
 {% block content %}

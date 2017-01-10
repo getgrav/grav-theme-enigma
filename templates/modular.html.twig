@@ -1,15 +1,17 @@
 {% extends 'partials/base.html.twig' %}
 
-{% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+{% set page_collection = page.collection() %}
+{% set hero_page = page_collection|first %}
+{% set page_collection = page_collection|slice(1) %}
 
 {% block javascripts %}
     {% if show_onpage_menu %}
-        {% do assets.add('theme://js/singlePageNav.min.js') %}
+        {% do assets.add('theme://js/singlePageNav.min.js', {group:'bottom'}) %}
     {% endif %}
     {{ parent() }}
 {% endblock %}
-
 
 {% block bottom %}
     {{ parent() }}
@@ -27,8 +29,8 @@
 {% endblock %}
 
 {% block header_navigation %}
-    {% if show_onpage_menu %}
-        <ul class="navigation">
+    {% if theme.modular.show_onpage_menu %}
+        <ul class="navigation caps-title">
         {% for module in page.collection() %}
             {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
             <li class="{{ current_module }}"><a href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
@@ -47,10 +49,31 @@
     {% endif %}
 {% endblock %}
 
-{% block content %}
-    {{ page.content }}
-    {% for module in page.collection() %}
-        <div id="{{ _self.pageLinkName(module.menu) }}"></div>
-        {{ module.content }}
+{% block hero %}
+    {% embed 'partials/hero.html.twig' with {page:hero_page} %}
+        {% block hero_content%}
+            {{ page.content }}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+
+{% block body_wrapper %}
+    {% for module in page_collection %}
+    {% set module_name = _self.pageLinkName(module.menu) %}
+    <div class="type-{{ module.template|replace('/','-') }}">
+        <div id="{{ module_name }}"></div>
+        <div id="module-{{ module_name }}" class="container wrapper grid-size">
+            {% block content %}
+                <div class="columns">
+                    <div class="column col-12">
+                        <div class="modular-item">
+                            {{ module.content }}
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
     {% endfor %}
 {% endblock %}
+

@@ -1,22 +1,24 @@
-<div class="modular-row features {{ page.header.class}}">
+{% set feature_style = page.header.style ?: 'big' %}
+{% set col_size = feature_style == 'big' ? '6' : '3' %}
+<div class="highlights {{ page.header.class}}">
     {{ content }}
-    <div class="feature-items">
-    {% for feature in page.header.features %}
-           <div class="feature">
+    <div class="columns mt-50 style-{{ feature_style }}">
+        {% for feature in page.header.features %}
+        <div class="column col-{{ col_size }} col-md-6">
             {% if feature.icon %}
-            <i class="fa fa-fw fa-{{ feature.icon }}"></i>
-            <div class="feature-content icon-offset">
-            {% else %}
-            <div class="feature-content">
-            {% endif %}
-            {% if feature.header %}
-            <h4>{{ feature.header }}</h4>
-            {% endif %}
-            {% if feature.text %}
-            <p>{{ feature.text }}</p>
-            {% endif %}
+            <div class="icon-wrapper"><i class="fa fa-fw fa-{{ feature.icon }}"></i></div>
+            <div class="content-wrapper icon-offset">
+                {% else %}
+                <div class="content-wrapper">
+                    {% endif %}
+                    {% if feature.header %}
+                        <h3>{{ feature.header }}</h3>
+                    {% endif %}
+                    {% if feature.text %}
+                        <p>{{ feature.text }}</p>
+                    {% endif %}
+                </div>
             </div>
+            {% endfor %}
         </div>
-    {% endfor %}
     </div>
-</div>

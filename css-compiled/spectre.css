@@ -592,6 +592,19 @@ code {
       border-color: #fff;
       border-right-color: transparent;
       border-top-color: transparent; }
+  .button.button-white {
+    border: 0.1rem solid #fff;
+    color: #fff; }
+    .button.button-white:focus {
+      background: white; }
+    .button.button-white:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #f2f2f2;
+      color: #fff; }
+    .button.button-white:active, .button.button-white.active {
+      background: #f2f2f2;
+      border-color: #e6e6e6;
+      color: #fff; }
   .button.button-link {
     background: transparent;
     border-color: transparent;

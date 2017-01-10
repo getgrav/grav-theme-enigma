@@ -1,0 +1,70 @@
+.type-modular-features {
+
+    .highlights {
+
+        text-align: center;
+
+        .column {
+
+
+            @include breakpoint(md) {
+                text-align: center;
+            }
+
+            h3 {
+                margin-top: 0;
+            }
+        }
+
+        .icon-wrapper {
+            text-align: center;
+            height: 70px;
+
+            i {
+                color: $core-color;
+                font-size: 50px;
+            }
+        }
+
+        .content-wrapper {
+            h3 {
+                font-family: $body-font-family;
+                font-size: $body-font-size;
+            }
+        }
+
+        .style-big {
+            .column {
+                text-align: left;
+            }
+            .icon-wrapper {
+                display: inline-block;
+                float: left;
+                height: 90px;
+                width: 150px;
+
+                i {
+                    font-size: 70px;
+                }
+
+                @include breakpoint(md) {
+                    float: none;
+                    display: block;
+                    width: auto;
+                }
+            }
+
+            .content-wrapper {
+                margin-left: 165px;
+                padding: 0 $layout-gutter;
+
+                @include breakpoint(md) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+    }
+
+
+}
