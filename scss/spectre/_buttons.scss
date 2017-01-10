@@ -29,6 +29,28 @@
         border-color: darken($core-color, 10%);
         color: $core-light-color;
     }
+
+    // Button Inverse
+    &.button-inverse {
+        border: .1rem solid $core-light-color;
+        color: $core-light-color;
+
+        &:focus {
+            background: rgba($core-secondary-color, 0.3);
+        }
+        &:hover {
+            background:  rgba($core-light-color, 0.2);
+            border-color: darken( $core-light-color, 5%);
+            color: $core-light-color;
+        }
+        &:active,
+        &.active {
+            background: rgba($core-secondary-color, 0.3);
+            border-color: darken( $core-light-color, 10%);
+            color: $core-light-color;
+        }
+    }
+
     // Button Primary
     &.button-primary {
         background: $core-color;
@@ -58,26 +80,7 @@
             }
         }
     }
-    // Button Primary
-    &.button-white {
-        border: .1rem solid $core-light-color;
-        color: $core-light-color;
 
-        &:focus {
-            background: lighten($core-secondary-color, 1%);
-        }
-        &:hover {
-            background:  rgba($core-light-color, 0.2);
-            border-color: darken( $core-light-color, 5%);
-            color: $core-light-color;
-        }
-        &:active,
-        &.active {
-            background: darken( $core-light-color, 5%);
-            border-color: darken( $core-light-color, 10%);
-            color: $core-light-color;
-        }
-    }
     // Button Link
     &.button-link {
         background: transparent;
@@ -94,6 +97,7 @@
             color: darken($core-link-color, 25%);
         }
     }
+
     // Button Small
     &.button-sm {
         border-radius: .2rem;
@@ -102,6 +106,7 @@
         line-height: 1.4rem;
         padding: .4rem 1rem;
     }
+
     // Button Large
     &.button-lg {
         border-radius: .4rem;
@@ -115,6 +120,7 @@
         display: block;
         width: 100%;
     }
+
     // Button Clear
     &.button-clear {
         background: transparent;
