@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,600);
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Work+Sans:300,500);
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -383,7 +383,7 @@ html {
 body {
   background: #f7f7f7;
   color: #666;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
   overflow-x: hidden; }
@@ -423,7 +423,7 @@ h3 {
   font-size: 3rem; }
 
 h4 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 2.4rem; }
 
 h5 {
@@ -436,7 +436,7 @@ p {
   margin: 1.6rem 0; }
 
 strong, b {
-  font-weight: 600; }
+  font-weight: 500; }
 
 blockquote {
   border-left: 6px solid #e3e3e3;

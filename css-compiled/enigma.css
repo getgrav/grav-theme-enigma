@@ -273,8 +273,7 @@ div#breadcrumbs {
   position: relative; }
   #hero-header > .container.wrapper {
     position: relative;
-    top: 50%;
-    transform: perspective(1px) translateY(-50%); }
+    top: 50%; }
   #hero-header.hero-header-fullscreen {
     height: 100vh; }
   #hero-header.hero-header-large {
@@ -407,7 +406,7 @@ div#breadcrumbs {
       min-height: 2.2rem;
       font-size: 80%;
       text-align: center;
-      font-weight: 600;
+      font-weight: 500;
       color: #fff;
       background-color: #8e44ad; }
   #body-wrapper #sidebar .related-pages {
