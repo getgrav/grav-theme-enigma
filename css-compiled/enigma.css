@@ -110,6 +110,8 @@
 
 #header.light #navbar ul li a {
   color: #eee; }
+  #header.light #navbar ul li a.active {
+    color: #fff; }
   #header.light #navbar ul li a:hover {
     color: #fff; }
   #header.light #navbar ul li a:before {
@@ -123,6 +125,8 @@
 
 #header.dark #navbar ul li a {
   color: #333; }
+  #header.dark #navbar ul li a.active {
+    color: #000; }
   #header.dark #navbar ul li a:hover {
     color: #000; }
   #header.dark #navbar ul li a:before {
@@ -144,6 +148,8 @@
         color: #fff; }
       #header.scrolled #navbar ul li a {
         color: #999; }
+        #header.scrolled #navbar ul li a.active {
+          color: #fff; }
         #header.scrolled #navbar ul li a:hover {
           color: #fff; }
         #header.scrolled #navbar ul li a:before {
@@ -214,6 +220,8 @@
         padding: 0.2rem 2rem;
         font-size: 1.3rem;
         color: #666; }
+        #navbar ul li a.active {
+          color: #8e44ad; }
         #navbar ul li a:hover {
           color: #8e44ad; }
           #navbar ul li a:hover:before {

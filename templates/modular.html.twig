@@ -7,7 +7,7 @@
 {% set page_collection = page_collection|slice(1) %}
 
 {% block javascripts %}
-    {% if show_onpage_menu %}
+    {% if theme.modular.show_onpage_menu %}
         {% do assets.add('theme://js/singlePageNav.min.js', {group:'bottom'}) %}
     {% endif %}
     {{ parent() }}
@@ -15,7 +15,7 @@
 
 {% block bottom %}
     {{ parent() }}
-    {% if show_onpage_menu %}
+    {% if theme.modular.show_onpage_menu %}
         <script>
         // singlePageNav initialization & configuration
         $('#navbar').singlePageNav({
