@@ -423,7 +423,7 @@ div#breadcrumbs {
   @media (max-width: 840px) {
     .type-modular-features .highlights .column {
       text-align: center; } }
-  .type-modular-features .highlights .column h3 {
+  .type-modular-features .highlights .column h3, .type-modular-features .highlights .column h6 {
     margin-top: 0; }
   .type-modular-features .highlights .icon-wrapper {
     text-align: center;
@@ -431,9 +431,6 @@ div#breadcrumbs {
     .type-modular-features .highlights .icon-wrapper i {
       color: #8e44ad;
       font-size: 50px; }
-  .type-modular-features .highlights .content-wrapper h3 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.6rem; }
   .type-modular-features .highlights .style-big .column {
     text-align: left; }
   .type-modular-features .highlights .style-big .icon-wrapper {

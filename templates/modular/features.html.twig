@@ -12,7 +12,11 @@
                 <div class="content-wrapper">
                     {% endif %}
                     {% if feature.header %}
+                        {% if feature_style == 'big' %}
                         <h3>{{ feature.header }}</h3>
+                        {% else %}
+                        <h6>{{ feature.header }}</h6>
+                        {% endif %}
                     {% endif %}
                     {% if feature.text %}
                         <p>{{ feature.text }}</p>
