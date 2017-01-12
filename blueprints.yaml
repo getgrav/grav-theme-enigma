@@ -15,9 +15,3 @@ license: MIT
 form:
   validation: loose
 
-    logo:
-      type: file
-      label: File Upload
-      destination: 'user/themes/enigma/assets'
-      accept:
-        - image/*
