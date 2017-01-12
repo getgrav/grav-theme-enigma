@@ -1,6 +1,7 @@
 #hero-header {
     text-align: center;
     position: relative;
+    padding-top: 3rem;
 
     //&[style*='none'] {
     //    .hero-header-wrapper {
@@ -37,12 +38,10 @@
 
     &.hero-header-medium {
         height: 400px;
-        padding-top: 3rem;
     }
 
     &.hero-header-small {
         height: 250px;
-        padding-top: 6rem;
     }
 
     &.hero-header-tiny {
