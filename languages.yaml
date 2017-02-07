@@ -1,10 +1,15 @@
 en:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Continue reading...
       NEXT_POST: Next Post
       PREV_POST: Previous Post
+  SHOP:
+    ITEM:
+      BACK: Back
+      NEXT_ITEM: Next Item
+      PREV_ITEM: Previous Item
   SIDEBAR:
     SIMPLE_SEARCH:
       HEADLINE: Search
@@ -26,12 +31,17 @@ en:
   ERROR: Error
 
 de:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Weiterlesen...
       NEXT_POST: Nächster Beitrag
       PREV_POST: Vorheriger Beitrag
+  SHOP:
+    ITEM:
+      BACK: Zurück
+      NEXT_ITEM: Nächstes Objekt
+      PREV_ITEM: Vorheriger Objekt
   SIDEBAR:
     SIMPLE_SEARCH:
       HEADLINE: SimpleSearch
@@ -53,12 +63,17 @@ de:
   ERROR: Fehler
   
 es:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Continuar leyendo...
       NEXT_POST: Siguiente Entrada
       PREV_POST: Entrada Anterior
+  SHOP:
+    ITEM:
+      BACK: Espalda
+      NEXT_ITEM: Siguiente Artículo
+      PREV_ITEM: Artículo Anterior
   SIDEBAR:
     SIMPLE_SEARCH:
       HEADLINE: Buscar
@@ -80,7 +95,7 @@ es:
   ERROR: Error
 
 fr:
-  TRANSLATION_TEST: Antimatter !
+  TRANSLATION_TEST: Enigma !
   BLOG:
     ITEM:
       CONTINUE_READING: Continuer la lecture...
@@ -107,7 +122,7 @@ fr:
   ERROR: Erreur
 
 it:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Continua a leggere...
@@ -160,7 +175,7 @@ ro:
   ERROR: Eroare
 
 ru:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Читать далее...
@@ -187,7 +202,7 @@ ru:
   ERROR: Ошибка
 
 uk:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Читати далі...
@@ -214,7 +229,7 @@ uk:
   ERROR: Помилка
 
 hr:
-  TRANSLATION_TEST: Antimatter!
+  TRANSLATION_TEST: Enigma!
   BLOG:
     ITEM:
       CONTINUE_READING: Nastavi s čitanjem...

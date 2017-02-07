@@ -1,0 +1,60 @@
+
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="columns">
+        <div id="item" class="column col-12">
+
+            {% if theme.default.show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+
+            <div class="content-item">
+
+                {{ page.content }}
+
+                <div class="columns product-list">
+                    {% for child in page.collection() %}
+                        {% if (child.header.unpublished is not defined or (child.header.unpublished == false)) %}
+                        {% set snipcart_image = child.media.images|first %}
+                        <div class="column col-4 col-md-6 col-sm-12 text-center">
+                            <h6><a href="{{ child.url }}">{{ child.header.title }}</a></h6>
+                            <div class="snipcart-thumb">
+                                {% if snipcart_image %}
+                                    <a href="{{ child.url }}">{{ snipcart_image.cropResize(600,600).html('child.header.title','snipcart-thumb-image')|raw }}</a>
+                                {% endif %}
+                                <span class="snipcart-price">${{ child.header.price }}</span>
+                            </div>
+                            <div class="snipcart-details">
+                                <p>
+                                    <a href="{{ child.url }}"
+                                       class="button button-small">
+                                        <i class="fa fa-info-circle"></i> Details
+                                    </a>
+                                    <a href="#"
+                                       class="button button-small snipcart-add-item"
+                                       data-item-id="{{ child.header.product_id }}"
+                                       data-item-name="{{ child.header.title }}"
+                                       data-item-price="{{ child.header.price }}"
+                                       data-item-url="{{ child.url }}"
+                                            {% spaceless %}
+                                                {% if snipcart_image %}
+                                                    data-item-image="{{ snipcart_image.cropResize(50,50).url|raw }}"
+                                                {% endif %}
+                                            {% endspaceless %}
+
+                                    >
+                                        <i class="fa fa-shopping-cart"></i> Add
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

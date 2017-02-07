@@ -1,0 +1,30 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="columns">
+        <div id="item" class="column col-12">
+
+            {% if theme.default.show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+            <div class="content-item">
+                {{ page.content }}
+
+                <div class="columns category-list">
+                {% for child in page.collection() %}
+                    {% if (child.header.unpublished is not defined or (child.header.unpublished == false)) %}
+                        {% set snipcart_image = child.media.images|first %}
+                        <div class="column col-6 col-sm-12 text-center">
+                            <h3><a href="{{ child.url }}">{{ child.header.category }}</a></h3>
+                            {% if snipcart_image %}
+                                <a href="{{ child.url }}">{{ snipcart_image.cropResize(1000,1000).html(child.header.category,'snipcart-thumb-image')|raw }}</a>
+                            {% endif %}
+                        </div>
+
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

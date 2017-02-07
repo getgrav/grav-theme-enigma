@@ -271,7 +271,7 @@ div#breadcrumbs {
   line-height: 5rem;
   height: 5rem;
   padding-left: 3rem; }
-  div#breadcrumbs span:first-child:before {
+  div#breadcrumbs > span:first-child:before, div#breadcrumbs > a:first-child:before {
     font-family: FontAwesome;
     content: "\f015";
     padding-right: 10px; }
@@ -428,6 +428,36 @@ div#breadcrumbs {
       border-bottom: 1px solid #efefef; }
       #body-wrapper #sidebar .related-pages li .score {
         float: right; }
+
+.content-item > .owl-carousel {
+  margin-top: -1.5rem; }
+  .content-item > .owl-carousel .owl-item > div {
+    padding: 8rem 8rem;
+    text-align: center; }
+  .content-item > .owl-carousel .owl-item h3, .content-item > .owl-carousel .owl-item h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
+  .content-item > .owl-carousel .owl-item h2 {
+    color: #fff;
+    font-size: 5rem;
+    letter-spacing: -2.5px; }
+  .content-item > .owl-carousel .owl-item h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 4rem;
+    letter-spacing: -2px; }
+
+.content-item .product-list .column {
+  padding: 2rem; }
+
+.content-item .product-item .snipcart-info {
+  padding: 1rem 4rem 1rem 0; }
+
+.content-item .product-item .snipcart-thumb .snipcart-price {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 3rem; }
 
 .type-modular-features .highlights {
   text-align: center; }

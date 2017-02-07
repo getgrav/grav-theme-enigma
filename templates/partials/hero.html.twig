@@ -2,10 +2,10 @@
 
     {% set hero_size = theme.hero.size %}
     {% set hero_image = page.media.images[theme.hero.image] %}
-    {% set hero_color = hero_image ? false : theme.hero.color %}
+    {% set hero_color = hero_image ? false : theme.hero.background %}
     {% set hero_style = theme.hero.style ?: 'dark' %}
 
-    <div id="hero-header" class="hero-header-{{ hero_size }} hero-header-{{ hero_style }}{{ theme.hero.overlay ? ' hero-header-overlay' : '' }}{{ hero_color ? ' hero-header-color' : ''  }}{{ hero_image ? ' hero-header-image' : '' }}" {% if hero_color %}style="background-color:{{ hero_color  }};"{% endif %}>
+    <div id="hero-header" class="hero-header-{{ hero_size }} hero-header-{{ hero_style }}{{ theme.hero.overlay ? ' hero-header-overlay' : '' }}{{ hero_color ? ' hero-header-color' : ''  }}{{ hero_image ? ' hero-header-image' : '' }}" {% if hero_color %}style="background:{{ hero_color  }};"{% endif %}>
         <div id="hero-header-image" {% if hero_image %}style="background-image: url({{ hero_image.url }});"{% endif %} ></div>
         {% block hero_wrapper %}
             {% if theme.hero.overlay %}

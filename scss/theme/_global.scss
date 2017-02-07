@@ -270,8 +270,6 @@ $header-height: 84px;
     }
 }
 
-
-
 // Mobile hamburger toggle
 #mobile-toggle {
     display: none;
@@ -290,7 +288,7 @@ div#breadcrumbs {
     height: 5rem;
     padding-left: $content-gutter;
 
-    span:first-child {
+    > span:first-child, > a:first-child {
         &:before {
             font-family: FontAwesome;
             content: "\f015";
