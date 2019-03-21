@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ html_lang }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
 {% block head %}
     <meta charset="utf-8" />
@@ -15,15 +15,17 @@
         {% do assets.addCss('theme://css/custom.css', 100) %}
         {% do assets.addCss('theme://css/font-awesome.min.css', 100) %}
     {% endblock %}
-    {{ assets.css() }}
 
     {% block javascripts %}
         {% do assets.addJs('jquery', 101) %}
         {% do assets.addJs('theme://js/smooth-scroll.min.js') %}
         {% do assets.addJs('theme://js/enigma.js') %}
     {% endblock %}
-    {{ assets.js() }}
 
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
 {% endblock head %}
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
@@ -94,7 +96,7 @@
     </footer>
     {% endblock %}
     {% block bottom %}
-        {{ assets.js('bottom') }}
+        {{ assets.js('bottom')|raw }}
     {% endblock %}
 </body>
 </html>

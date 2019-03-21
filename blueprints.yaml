@@ -1,5 +1,5 @@
 name: Enigma
-version: 1.0.0
+version: 1.1.0
 description: "Enigma is the **NEW** default theme included with **Grav**"
 icon: empire
 author:
@@ -11,6 +11,8 @@ demo: http://demo.getgrav.org/blog-skeleton
 keywords: enigma, theme, core, modern, fast, responsive, html5, css3
 bugs: https://github.com/getgrav/grav-theme-enigma/issues
 license: MIT
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
 
 form:
   validation: loose
